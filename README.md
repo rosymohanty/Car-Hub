@@ -2,6 +2,10 @@
 
 A car rental showcase built with **Next.js 16 (App Router)**, **React 19**, **TypeScript** and **Tailwind CSS v4**. Browse a catalogue of cars, filter by manufacturer, model, fuel type and year, view details in a modal, and load more results.
 
+## Live Demo
+
+**[car-hub-eight-phi.vercel.app](https://car-hub-eight-phi.vercel.app/)**
+
 ## Features
 
 - Hero section with smooth scroll to the catalogue
@@ -35,8 +39,8 @@ A car rental showcase built with **Next.js 16 (App Router)**, **React 19**, **Ty
 ### Installation
 
 ```bash
-git clone <your-repo-url>
-cd car_showcase
+git clone https://github.com/rosymohanty/Car-Hub.git
+cd Car-Hub
 npm install
 ```
 
@@ -102,6 +106,15 @@ car_showcase/
 2. `app/page.tsx` reads the params and passes them to `fetchCars` inside a `<Suspense>` boundary.
 3. `fetchCars` (in `utils/index.ts`) calls the API Ninjas Cars API on the server, so the API key is never exposed to the browser.
 4. Results render as `CarCard` components. "Show More" increases the `limit` param.
+
+## Deployment
+
+The app is deployed on [Vercel](https://vercel.com/). To deploy your own copy:
+
+1. Push the project to GitHub.
+2. Import the repository in Vercel (framework preset: Next.js, default build settings).
+3. Add `API_NINJAS_KEY` (and optionally `NEXT_PUBLIC_IMAGIN_API_KEY`) under **Environment Variables**.
+4. Click **Deploy**. Every push to `main` redeploys automatically.
 
 ## Known Limitations (API Ninjas free plan)
 
